@@ -4,13 +4,13 @@ avatar: './me.jpg'
 skills:
   - Java
   - Python
-  - C 
+  - C
   - HTML & CSS
   - Android
   - Drupal
 ---
 
-Hello! I'm Ashutosh Kumar, a Software Engineer Enthusiast in India.
+Hello! I'm Ashutosh Kumar, a Software Engineering Enthusiast in India.
 
 I enjoy creating things that which is impacting a lot of people, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
 

@@ -1,8 +1,9 @@
 ---
 title: 'Hi, my name is'
-name: 'Brittany Chiang'
-subtitle: 'I build things for the web.'
+name: 'Ashutosh Kumar'
+subtitle: 'I develop Software and Applications.'
 buttonText: 'Get In Touch'
 ---
 
-I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.
+I'm Ashutosh Kumar, a Software Engineer Enthusiast in India. Open source Contributor.
+I love to develop Software and Applications.

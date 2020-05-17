@@ -1,12 +1,12 @@
 ---
-date: '2018-04-01'
-title: 'Studio Developer'
-company: 'Scout'
-location: 'Northeastern University'
-range: 'Jan - April 2018'
-url: 'https://web.northeastern.edu/scout/'
+date: '2018-11-15'
+title: 'DSC Team Core Member'
+company: 'DSC SICSR'
+location: 'SICSR, Pune, Maharastra'
+range: 'November 2017 - December 2018'
+url: 'https://www.sicsr.ac.in/home/'
 ---
 
-- Worked with a team of three designers to build a marketing website and e-commerce platform for [blistabloc](https://blistabloc.com), an ambitious startup originating from Northeastern
-- Helped solidify a brand direction for blistabloc that spans both packaging and web
-- Interfaced with clients on a weekly basis, providing technological expertise
+- Worked with a team of four developers to build an android application for local shops
+- Help local shops to maintain and manage their stocks using Android application
+- Improve and Promote usage of smart phones among elders and local shops.

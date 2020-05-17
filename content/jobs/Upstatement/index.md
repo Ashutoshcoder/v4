@@ -1,12 +1,12 @@
 ---
-date: '2018-05-14'
-title: 'Engineer'
-company: 'Upstatement'
-location: 'Boston, MA'
-range: 'May 2018 - Present'
-url: 'https://www.upstatement.com/'
+date: '19th January,2018'
+title: 'Chairman IEEE Student Branch, IEEE'
+company: 'IEEE SICSR'
+location: 'Pune Maharastra'
+range: 'January 2018 - August 2019'
+url: 'https://edu.ieee.org/in-sicsr/'
 ---
 
-- Write modern, performant, maintainable code for a diverse array of client and internal projects
-- Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify
-- Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis
+- Chairman of IEEE Student Branch at SICSR and Founding Team Member
+- Best Emerging Student Branch of the Year 2019 India
+- Student Chair of the year 2019 - IEEE Pune Section

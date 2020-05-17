@@ -1,13 +1,13 @@
 ---
-date: '2017-12-21'
-title: 'UI Engineer Co-op'
-company: 'Apple'
+date: '2019-11-06'
+title: 'Chief Editor and Technical Team Lead'
+company: 'ACM SICSR'
 location: 'Cupertino, CA'
-range: 'July - Dec 2017'
-url: 'https://www.apple.com/music/'
+range: 'November 2019 - Current'
+url: 'http://sicsr.acm.org/'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Author for multiple blogs and Technical Head for ACM SICSR
+- Developed ACM SICSR Webiste
+- Conducted Competitions - '50 days of Euler' and Webinars for Secure Coding
+- Contributed extensively to ACM SICSR Github Repository

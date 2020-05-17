@@ -23,11 +23,11 @@ module.exports = {
       url: 'https://www.linkedin.com/in/ashutoshkumarlink/',
     },
     {
-      name: 'Hackerrank',
+      name: 'Instagram',
       url: 'https://www.hackerrank.com/ashutoshkumardb1?hr_r=1',
     },
     {
-      name: 'Dev',
+      name: 'Codepen',
       url: 'https://dev.to/@ashutoshcoder',
     },
     {

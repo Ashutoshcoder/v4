@@ -1,11 +1,11 @@
 ---
-date: '2017-04-01'
-title: 'Studio Developer'
-company: 'Scout'
-location: 'Northeastern University'
-range: 'Jan - June 2017'
-url: 'https://web.northeastern.edu/scout/'
+date: '2019-02-14'
+title: 'Public Speaker'
+company: 'gnuNify'
+location: 'Pune, Maharastra'
+range: 'Dec 2018 - Feb 2019'
+url: 'https://gnunify.sicsr.ac.in/'
 ---
 
-- Collaborated with a small team of student designers to spearhead a new brand and design system for Scout’s inaugural student-led design conference at Northeastern
-- Worked closely with designers and management team to develop, document, and manage the conference’s marketing website using Jekyll, Sass, and JavaScript
+- Speaker for gnuNify 2019
+- Python - "The Saviour" - Automating the boring stuff using Python.

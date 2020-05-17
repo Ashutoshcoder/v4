@@ -1,12 +1,13 @@
 ---
-date: '2016-12-21'
-title: 'Software Engineer Co-op'
-company: 'Starry'
-location: 'Boston, MA'
-range: 'July - Dec 2016'
-url: 'https://starry.com/'
+date: '2018-01-02'
+title: 'Web Developer'
+company: 'Tara Mobile Creches - NGO - Pune'
+location: 'Pune, Maharastra'
+range: 'January 2018 - March 2018'
+url: 'https://taramobilecrechespune.org/payroll/'
 ---
 
-- Engineered and maintained major features of Starry's customer-facing web app using ES6, Handlebars, Backbone, Marionette and CSS
-- Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with Starry Station
-- Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences across Starry’s iOS and Android mobile apps
+- TMC (Tara Mobile Creches) is an NGO in Pune, Maharashtra, development of
+  their employee website.
+- Developed QR Code based attendance system for improved and better management of employee attendance.
+- Helped them calculate monthly salary and annual bonus using the attendance system.

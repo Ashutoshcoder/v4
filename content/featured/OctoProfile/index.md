@@ -1,14 +1,19 @@
 ---
-date: '3'
-title: 'OctoProfile'
-cover: './octoprofile.png'
-github: 'https://github.com/bchiang7/octoprofile'
-external: 'https://octoprofile.now.sh'
+date: '2'
+title: 'Alumnite'
+cover: './halcyon.png'
+github: ''
+external: 'http://alumnite.in/'
 tech:
-  - Next.js
-  - Chart.js
-  - GitHub API
+  - Android
+  - PHP
+  - XML
+  - JSON
+  - MySQL
 showInProjects: true
 ---
 
-A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.
+An Alumni Portal to help educational institutions manage all the relevant data with
+effective management techniques. The application and website were developed using
+technologies - Android, PHP, XML, JSON, AJAX, Java and using MySQL for data
+storage and management.

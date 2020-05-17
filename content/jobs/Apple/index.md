@@ -3,7 +3,7 @@ date: '2019-11-06'
 title: 'Chief Editor and Technical Team Lead'
 company: 'ACM SICSR'
 location: 'Cupertino, CA'
-range: 'November 2019 - Current'
+range: 'November 2019 - Ongoing'
 url: 'http://sicsr.acm.org/'
 ---
 

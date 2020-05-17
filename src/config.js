@@ -6,8 +6,9 @@ module.exports = {
     'Ashutosh Kumar, Ashutosh, Kumar, , software engineer, back-end engineer, web developer, java, indian, python',
   siteUrl: 'https://ashutoshkumar.tech/',
   siteLanguage: 'en_US',
-  googleAnalyticsID: 'UA-45666519-2',
+
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
+
   name: 'Ashutosh Kumar',
   location: 'Jamshedpur, India',
   email: 'ashutoshkumardbms@gmail.com',
@@ -25,6 +26,10 @@ module.exports = {
     {
       name: 'Instagram',
       url: 'https://www.hackerrank.com/ashutoshkumardb1?hr_r=1',
+    },
+    {
+      name: 'Medium',
+      url: 'https://medium.com/@ashutoshkumardbms',
     },
     {
       name: 'Codepen',

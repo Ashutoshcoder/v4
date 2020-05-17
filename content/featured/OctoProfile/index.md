@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Alumnite'
-cover: './halcyon.png'
+cover: './octoprofile.png'
 github: ''
 external: 'http://alumnite.in/'
 tech:
@@ -14,6 +14,4 @@ showInProjects: true
 ---
 
 An Alumni Portal to help educational institutions manage all the relevant data with
-effective management techniques. The application and website were developed using
-technologies - Android, PHP, XML, JSON, AJAX, Java and using MySQL for data
-storage and management.
+effective management techniques. Helping in creating an interactive environment for Alumni using our Android Platform and efficent Alumni management using our Website.

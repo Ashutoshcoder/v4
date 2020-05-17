@@ -6,11 +6,11 @@ import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
-const EduContainer = styled(Section)`
+const StyledContainer = styled(Section)`
   position: relative;
   max-width: 700px;
 `;
-const TabsContainer = styled.div`
+const StyledTabs = styled.div`
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -18,11 +18,15 @@ const TabsContainer = styled.div`
     display: block;
   `};
 `;
-const Tabs = styled.ul`
+const StyledTabList = styled.ul`
   display: block;
   position: relative;
   width: max-content;
   z-index: 3;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
   ${media.thone`
     display: flex;
     overflow-x: scroll;
@@ -34,6 +38,7 @@ const Tabs = styled.ul`
     width: calc(100% + 50px);
     margin-left: -25px;
   `};
+
   li {
     &:first-of-type {
       ${media.thone`
@@ -53,7 +58,7 @@ const Tabs = styled.ul`
     }
   }
 `;
-const Tab = styled.button`
+const StyledTabButton = styled.button`
   ${mixins.link};
   display: flex;
   align-items: center;
@@ -62,19 +67,19 @@ const Tab = styled.button`
   height: ${theme.tabHeight}px;
   padding: 0 20px 2px;
   transition: ${theme.transition};
-  border-left: 2px solid ${colors.darkGrey};
+  border-left: 2px solid ${colors.lightestNavy};
   text-align: left;
   white-space: nowrap;
   font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
-  color: ${props => (props.isActive ? colors.green : colors.lightGrey)};
+  font-size: ${fontSizes.smish};
+  color: ${props => (props.isActive ? colors.green : colors.slate)};
   ${media.tablet`padding: 0 15px 2px;`};
   ${media.thone`
     ${mixins.flexCenter};
     padding: 0 15px;
     text-align: center;
     border-left: 0;
-    border-bottom: 2px solid ${colors.darkGrey};
+    border-bottom: 2px solid ${colors.lightestNavy};
     min-width: 120px;
   `};
   &:hover,
@@ -82,7 +87,7 @@ const Tab = styled.button`
     background-color: ${colors.lightNavy};
   }
 `;
-const Highlighter = styled.span`
+const StyledHighlight = styled.span`
   display: block;
   background: ${colors.green};
   width: 2px;
@@ -112,72 +117,36 @@ const Highlighter = styled.span`
     margin-left: 25px;
   `};
 `;
-const ContentContainer = styled.div`
+const StyledTabContent = styled.div`
   position: relative;
-  padding-top: 12px;
-  padding-left: 30px;
-  flex-grow: 1;
-  ${media.tablet`padding-left: 20px;`};
-  ${media.thone`padding-left: 0;`};
-`;
-const TabContent = styled.div`
-  top: 0;
-  left: 0;
   width: 100%;
   height: auto;
-  opacity: ${props => (props.isActive ? 1 : 0)};
-  z-index: ${props => (props.isActive ? 2 : -1)};
-  position: ${props => (props.isActive ? 'relative' : 'absolute')};
-  visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
-  transition: ${theme.transition};
-  transition-duration: ${props => (props.isActive ? '0.5s' : '0s')};
+  padding-top: 12px;
+  padding-left: 30px;
+  ${media.tablet`padding-left: 20px;`};
+  ${media.thone`padding-left: 0;`};
+
   ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: ${fontSizes.large};
-    li {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 10px;
-      &:before {
-        content: '▹';
-        position: absolute;
-        left: 0;
-        color: ${colors.green};
-        line-height: ${fontSizes.xlarge};
-      }
-    }
+    ${mixins.fancyList};
   }
   a {
     ${mixins.inlineLink};
   }
 `;
-const EduTitle = styled.h4`
+const StyledJobTitle = styled.h4`
   color: ${colors.lightestSlate};
-  font-size: ${fontSizes.xxlarge};
+  font-size: ${fontSizes.xxl};
   font-weight: 500;
   margin-bottom: 5px;
 `;
-const School = styled.span`
+const StyledCompany = styled.span`
   color: ${colors.green};
 `;
-const EduDetails = styled.h5`
+const StyledJobDetails = styled.h5`
   font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
+  font-size: ${fontSizes.smish};
   font-weight: normal;
-  letter-spacing: 0.5px;
-  color: ${colors.lightSlate};
-  margin-bottom: 10px;
-  svg {
-    width: 15px;
-  }
-`;
-const EduLocation = styled.h5`
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
-  font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05em;
   color: ${colors.lightSlate};
   margin-bottom: 30px;
   svg {
@@ -185,77 +154,108 @@ const EduLocation = styled.h5`
   }
 `;
 
-const Education = ({ data }) => {
+const Jobs = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
+  const [tabFocus, setTabFocus] = useState(null);
+  const tabs = useRef([]);
+
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
+  const focusTab = () => {
+    if (tabs.current[tabFocus]) {
+      tabs.current[tabFocus].focus();
+    } else {
+      // If we're at the end, go to the start
+      if (tabFocus >= tabs.current.length) {
+        setTabFocus(0);
+      }
+      // If we're at the start, move to the end
+      if (tabFocus < 0) {
+        setTabFocus(tabs.current.length - 1);
+      }
+    }
+  };
+
+  // Only re-run the effect if tabFocus changes
+  useEffect(() => focusTab(), [tabFocus]);
+
+  const onKeyPressed = e => {
+    if (e.keyCode === 38 || e.keyCode === 40) {
+      e.preventDefault();
+      if (e.keyCode === 40) {
+        // Move down
+        setTabFocus(tabFocus + 1);
+      } else if (e.keyCode === 38) {
+        // Move up
+        setTabFocus(tabFocus - 1);
+      }
+    }
+  };
+
   return (
-    <EduContainer id="education" ref={revealContainer}>
+    <StyledContainer id="jobs" ref={revealContainer}>
       <Heading>Education</Heading>
-      <TabsContainer>
-        <Tabs role="tablist">
+      <StyledTabs>
+        <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyPressed(e)}>
           {data &&
             data.map(({ node }, i) => {
               const { company } = node.frontmatter;
               return (
                 <li key={i}>
-                  <Tab
+                  <StyledTabButton
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
+                    ref={el => (tabs.current[i] = el)}
+                    id={`tab-${i}`}
                     role="tab"
-                    aria-selected={activeTabId === i ? 'true' : 'false'}
-                    aria-controls={`tab${i}`}
-                    id={`tab${i}`}
+                    aria-selected={activeTabId === i ? true : false}
+                    aria-controls={`panel-${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}>
                     <span>{company}</span>
-                  </Tab>
+                  </StyledTabButton>
                 </li>
               );
             })}
-          <Highlighter activeTabId={activeTabId} />
-        </Tabs>
-        <ContentContainer>
-          {data &&
-            data.map(({ node }, i) => {
-              const { frontmatter, html } = node;
-              const { title, url, company, range, location } = frontmatter;
-              return (
-                <TabContent
-                  key={i}
-                  isActive={activeTabId === i}
-                  id={`job${i}`}
-                  role="tabpanel"
-                  tabIndex="0"
-                  aria-labelledby={`job${i}`}
-                  aria-hidden={activeTabId !== i}>
-                  <EduTitle>
-                    <span>{title}</span>
-                    <School>
-                      <span>&nbsp;@&nbsp;</span>
-                      <a href={url} target="_blank" rel="nofollow noopener noreferrer">
-                        {company}
-                      </a>
-                    </School>
-                  </EduTitle>
-                  <EduDetails>
-                    <span>{range}</span>
-                  </EduDetails>
-                  <EduLocation>
-                    <span>{location}</span>
-                  </EduLocation>
-                  <div dangerouslySetInnerHTML={{ __html: html }} />
-                </TabContent>
-              );
-            })}
-        </ContentContainer>
-      </TabsContainer>
-    </EduContainer>
+          <StyledHighlight activeTabId={activeTabId} />
+        </StyledTabList>
+
+        {data &&
+          data.map(({ node }, i) => {
+            const { frontmatter, html } = node;
+            const { title, url, company, range } = frontmatter;
+            return (
+              <StyledTabContent
+                key={i}
+                isActive={activeTabId === i}
+                id={`panel-${i}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${i}`}
+                tabIndex={activeTabId === i ? '0' : '-1'}
+                hidden={activeTabId !== i}>
+                <StyledJobTitle>
+                  <span>{title}</span>
+                  <StyledCompany>
+                    <span>&nbsp;@&nbsp;</span>
+                    <a href={url} target="_blank" rel="nofollow noopener noreferrer">
+                      {company}
+                    </a>
+                  </StyledCompany>
+                </StyledJobTitle>
+                <StyledJobDetails>
+                  <span>{range}</span>
+                </StyledJobDetails>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+              </StyledTabContent>
+            );
+          })}
+      </StyledTabs>
+    </StyledContainer>
   );
 };
 
-Education.propTypes = {
+Jobs.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default Education;
+export default Jobs;

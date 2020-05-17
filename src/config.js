@@ -1,38 +1,38 @@
 module.exports = {
-  siteTitle: 'Brittany Chiang | Software Engineer',
+  siteTitle: 'Ashutosh Kumar | Software Engineering Enthusiast',
   siteDescription:
-    'Brittany Chiang is a software engineer based in Boston, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
+    'I\'m Ashutosh Kumar, a Software Engineering Enthusiast in India. Open source Contributor. I love to develop Software and Applications.',
   siteKeywords:
-    'Brittany Chiang, Brittany, Chiang, bchiang7, software engineer, front-end engineer, web developer, javascript, northeastern',
-  siteUrl: 'https://brittanychiang.com',
+    'Ashutosh Kumar, Ashutosh, Kumar, , software engineer, back-end engineer, web developer, java, indian, python',
+  siteUrl: 'https://ashutoshkumar.tech/',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Brittany Chiang',
-  location: 'Boston, MA',
-  email: 'brittany.chiang@gmail.com',
-  github: 'https://github.com/bchiang7',
-  twitterHandle: '@bchiang7',
+  name: 'Ashutosh Kumar',
+  location: 'Jamshedpur, India',
+  email: 'ashutoshkumardbms@gmail.com',
+  github: 'https://github.com/Ashutoshcoder',
+  twitterHandle: '@ashutoshkumarjs',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/Ashutoshcoder',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://www.linkedin.com/in/ashutoshkumarlink/',
     },
     {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      name: 'Hackerrank',
+      url: 'https://www.hackerrank.com/ashutoshkumardb1?hr_r=1',
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      name: 'Dev',
+      url: 'https://dev.to/@ashutoshcoder',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      url: 'https://twitter.com/ashutoshkumarjs',
     },
   ],
 
@@ -42,7 +42,11 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Experience',
+      name: 'Education',
+      url: '/#education',
+    },
+    {
+      name: 'Engagements',
       url: '/#jobs',
     },
     {

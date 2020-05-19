@@ -1,7 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
+import {
+  Layout,
+  Hero,
+  About,
+  Jobs,
+  Featured,
+  Projects,
+  Contact,
+  Education,
+  Blog,
+} from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -14,9 +24,11 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Education data={data.education.edges} />
       <Jobs data={data.jobs.edges} />
       <Featured data={data.featured.edges} />
       <Projects data={data.projects.edges} />
+      <Blog data={data.blog.edges} />
       <Contact data={data.contact.edges} />
     </StyledMainContainer>
   </Layout>
@@ -44,6 +56,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
       edges {
         node {
@@ -62,6 +75,26 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    education: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/education/" } }
+      sort: { fields: [frontmatter___range], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            title
+            company
+            location
+            range
+            url
+          }
+          html
+        }
+      }
+    }
+
     jobs: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/jobs/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -79,9 +112,10 @@ export const pageQuery = graphql`
         }
       }
     }
+
     featured: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/featured/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
     ) {
       edges {
         node {
@@ -102,6 +136,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     projects: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/projects/" }
@@ -121,6 +156,25 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    blog: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            title
+            tags
+            url
+            show
+          }
+          html
+        }
+      }
+    }
+
     contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
       edges {
         node {

@@ -55,24 +55,29 @@ const NavListItem = styled.li`
   position: relative;
   font-size: ${fontSizes.lg};
   counter-increment: item 1;
+
   ${media.thone`
     margin: 0 auto 10px;
     font-size: ${fontSizes.md};
   `};
+
   ${media.tiny`font-size: ${fontSizes.smish};`};
+
   &:before {
     display: block;
-    content: '0' counter(item) '.';
+    content: '#' counter(item);
     color: ${colors.green};
     font-size: ${fontSizes.sm};
     margin-bottom: 5px;
   }
 `;
+
 const NavLink = styled(Link)`
   ${mixins.link};
   padding: 3px 20px 20px;
   width: 100%;
 `;
+
 const ResumeLink = styled.a`
   ${mixins.bigButton};
   padding: 18px 50px;

@@ -1,12 +1,11 @@
 ---
-date: '19th January,2018'
-title: 'Chairman IEEE Student Branch, IEEE'
-company: 'IEEE SICSR'
-location: 'Pune Maharastra'
-range: 'January 2018 - August 2019'
-url: 'https://edu.ieee.org/in-sicsr/'
+date: '2019-02-14'
+title: 'Public Speaker'
+company: 'gnuNify'
+location: 'Pune, Maharastra'
+range: 'Dec 2018 - Feb 2019'
+url: 'https://gnunify.sicsr.ac.in/'
 ---
 
-- Chairman of IEEE Student Branch at SICSR and Founding Team Member
-- Best Emerging Student Branch of the Year 2019 India
-- Student Chair of the year 2019 - IEEE Pune Section
+- Speaker for gnuNify 2019
+- Python - "The Saviour" - Automating the boring stuff using Python.

@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Ashutosh Kumar | Software Engineering Enthusiast',
+  siteTitle: 'Ashutosh Kumar ',
   siteDescription:
     'I\'m Ashutosh Kumar, a Software Engineering Enthusiast in India. Open source Contributor. I love to develop Software and Applications.',
   siteKeywords:
@@ -55,8 +55,12 @@ module.exports = {
       url: '/#jobs',
     },
     {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
+    },
+    {
+      name: 'Blog',
+      url: '/#blog',
     },
     {
       name: 'Contact',

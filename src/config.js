@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Ashutosh Kumar ',
+  siteTitle: 'Ashutosh Kumar | Software Engineering Enthusiast ',
   siteDescription:
     'I\'m Ashutosh Kumar, a Software Engineering Enthusiast in India. Open source Contributor. I love to develop Software and Applications.',
   siteKeywords:
@@ -24,11 +24,11 @@ module.exports = {
       url: 'https://www.linkedin.com/in/ashutoshkumarlink/',
     },
     {
-      name: 'Instagram',
+      name: 'Zap',
       url: 'https://www.hackerrank.com/ashutoshkumardb1?hr_r=1',
     },
     {
-      name: 'Medium',
+      name: 'Star',
       url: 'https://medium.com/@ashutoshkumardbms',
     },
     {

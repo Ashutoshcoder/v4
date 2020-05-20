@@ -5,7 +5,7 @@ skills:
   - Java
   - Python
   - C
-  - HTML & CSS
+  - Apache Spark
   - Android
   - Drupal
 ---

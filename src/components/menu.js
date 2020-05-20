@@ -65,7 +65,7 @@ const NavListItem = styled.li`
 
   &:before {
     display: block;
-    content: '#' counter(item);
+    content: '0' counter(item) '.';
     color: ${colors.green};
     font-size: ${fontSizes.sm};
     margin-bottom: 5px;
